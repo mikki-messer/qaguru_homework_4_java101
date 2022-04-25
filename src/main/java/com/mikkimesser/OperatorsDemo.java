@@ -54,8 +54,7 @@ public class OperatorsDemo {
             }
         }
 
-
-
+        //strings
         String mString = "Mike";
         String mString2 = "Mike";
 
@@ -68,16 +67,27 @@ public class OperatorsDemo {
         if (!mString2.equals(mString))
             System.out.println("Spelling matters!");
 
+        //instance of
         if (name instanceof String)
             System.out.println("Yes, it is a String!");
 
         byte day = (byte) LocalDate.now().getDayOfMonth();
 
+        // ? condition
         String message = day % 2 == 1 ?
                 "Today is an odd day"
                 :
                 "Today is an even day";
         System.out.println(message);
+
+        //some more comparisons and ! operator
+        if (aChar!='w')
+            System.out.println("m!=w");
+
+        if (aFloat == aDouble)
+            System.out.println("Float can be equal to double");
+        else
+            System.out.println("Float can't be equal to double");
 
         //overrun tests
         System.out.println("Before Overrun up "+aByte);
@@ -87,12 +97,5 @@ public class OperatorsDemo {
         aByte = (byte) (aByte - aLong);
         System.out.println("Overrun down "+aByte);
 
-        if (aChar!='w')
-            System.out.println("m!=w");
-
-        if (aFloat == aDouble)
-            System.out.println("Float can be equal to double");
-        else
-            System.out.println("Float can't be equal to double");
     }
 }
